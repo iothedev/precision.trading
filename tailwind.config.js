@@ -17,6 +17,9 @@ module.exports = {
         foreground: {
           1: '#fff',
           2: '#dff6e652'
+        },
+        border: {
+          1: '#1C1C1C'
         }
       }
     },
