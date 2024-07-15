@@ -222,7 +222,7 @@ function TradeBetter() {
                     x: parallaxPosition.x,
                     y: parallaxPosition.y,
                 }}
-                transition={{ type: 'spring', stiffness: 50, damping: 20 }}
+                transition={{ duration: 0 }}
                 className='absolute bottom-0 right-0 -mt-1/2 -ml-1/2'
             />
         </motion.div>
