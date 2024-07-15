@@ -155,9 +155,9 @@ function Statistics() {
     )
 }
 
-
 function TradeBetter() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [parallaxPosition, setParallaxPosition] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -174,11 +174,18 @@ function TradeBetter() {
         };
     }, []);
 
-    const calculateParallax = (position, axis) => {
-        const middle = axis === 'x' ? window.innerWidth / 2 : window.innerHeight / 2;
-        const move = axis === 'x' ? (position - middle) / 50 : (position - middle) / 50;
-        return move;
-    };
+    useEffect(() => {
+        const calculateParallax = (position, axis) => {
+            const middle = axis === 'x' ? window.innerWidth / 2 : window.innerHeight / 2;
+            const move = axis === 'x' ? (position - middle) / 50 : (position - middle) / 50;
+            return move;
+        };
+
+        setParallaxPosition({
+            x: calculateParallax(mousePosition.x, 'x'),
+            y: calculateParallax(mousePosition.y, 'y'),
+        });
+    }, [mousePosition]);
 
     return (
         <motion.div
@@ -212,10 +219,10 @@ function TradeBetter() {
             <motion.img
                 src='/algoSettings.svg'
                 animate={{
-                    x: calculateParallax(mousePosition.x, 'x'),
-                    y: calculateParallax(mousePosition.y, 'y'),
+                    x: parallaxPosition.x,
+                    y: parallaxPosition.y,
                 }}
-                transition={{ duration: 0 }}
+                transition={{ type: 'spring', stiffness: 50, damping: 20 }}
                 className='absolute bottom-0 right-0 -mt-1/2 -ml-1/2'
             />
         </motion.div>
