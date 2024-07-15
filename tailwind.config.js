@@ -12,7 +12,8 @@ module.exports = {
           1: '#4DFF7E'
         },
         background: {
-          1: '#000'
+          1: '#090909',
+          2: '#000'
         },
         foreground: {
           1: '#fff',

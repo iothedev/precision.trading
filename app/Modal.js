@@ -15,7 +15,7 @@ function Modal({ isOpen, setIsOpen, children }) {
                         onClick={() => setIsOpen(!isOpen)}
                     />
                     
-                    <motion.div animate={{ translateY: ['25%', 0] }}>
+                    <motion.div animate={{ translateY: ['25%', 0] }} className='p-6'>
                         {children}
                     </motion.div>
                 </motion.div>
