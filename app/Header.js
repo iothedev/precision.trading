@@ -18,7 +18,7 @@ function Header() {
                 <img src='/logo.svg' className='h-full' />
             </Link>
 
-            <Button>Get Access Now</Button>
+            <Button className='hidden sm:block'>Get Access Now</Button>
         </motion.header>
     );
 }
