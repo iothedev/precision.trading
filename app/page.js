@@ -269,8 +269,8 @@ function Pricing() {
                     <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>{description}</p>
                 </div>
                 <div className='mt-6 space-y-2'>
-                    {features.forEach(feature => (
-                        <div className='flex items-center gap-4 text-xs sm:text-sm'>
+                    {features.map((feature, index) => (
+                        <div key={index} className='flex items-center gap-4 text-xs sm:text-sm'>
                             <div className='bg-accent-1 text-background-1 h-4 w-4 rounded-md flex items-center justify-center'>
                                 <IconCheck />
                             </div>
