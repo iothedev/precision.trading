@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-background-2 text-foreground-1 selection:bg-accent-1/10;
+    @apply bg-background-1 text-foreground-1 selection:bg-accent-1/10;
   }
 }

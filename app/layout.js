@@ -1,5 +1,6 @@
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import clsx from 'clsx';
 
 const work_Sans = Work_Sans({ subsets: ["latin"] });
 
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={work_Sans.className}>{children}</body>
+      <body className={clsx(work_Sans.className, 'overflow-x-hidden')}>{children}</body>
     </html>
   );
 }
