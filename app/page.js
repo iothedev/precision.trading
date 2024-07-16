@@ -6,14 +6,14 @@ import Modal from './Modal';
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Plus } from 'lucide-react';
+import { IconPlayerPlayFilled, IconPlus, IconCheck } from '@tabler/icons-react';
 import clsx from 'clsx';
 
 function Hero() {
     return (
         <div className='w-full max-w-screen-md mx-auto text-center mt-24 sm:mt-44 px-6'>
             <h1 className='text-3xl sm:text-6xl font-medium !leading-tight tracking-[-2px]'>Maximize profitability with AI-powered trading</h1>
-            <p className='mt-5 text-sm sm:text-base text-foreground-2'> Our cutting-edge, AI-powered trading indicator is designed to
+            <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'> Our cutting-edge, AI-powered trading indicator is designed to
                 give you the edge in the market by delivering accurate and timely signals.</p>
             <div className='mt-8'>
                 <Button className='mx-auto'>Get Access Now</Button>
@@ -39,21 +39,25 @@ function Video() {
             </Modal>
 
             <div className='relative w-full max-w-screen-xl mx-auto -mt-10 px-6'>
-                <div className='w-full border border-border-1 bg-background-2 rounded-3xl p-4 sm:p-6'>
-                    <div className='relative overflow-hidden w-full h-full rounded-2xl border border-border-1 bg-background-2 aspect-video flex items-center justify-center'>
+                <div className='min-h-[600px] aspect-[1.78/1] w-full border border-border-1 bg-background-3 rounded-[44px] p-4 sm:p-6'>
+                    <div className='relative overflow-hidden w-full h-full rounded-[24px] border border-border-1 bg-background-2 flex items-center justify-center'>
                         <img
                             src='/thumbnail.png'
-                            className='absolute top-0 left-0 w-full h-full'
+                            className='absolute top-0 right-0 h-full w-full object-cover object-right block lg:hidden'
                         />
+                        <img
+                            src='/thumbnail.png'
+                            class='absolute top-0 left-0 w-full h-full hidden lg:block'
+                        ></img>
 
-                        <div
+                        {/*<div
                             onClick={() => setIsOpen(!isOpen)}
-                            className='cursor-pointer select-none h-20 sm:h-28 w-20 sm:w-28 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 shadow-md p-4 group duration-150 hover:p-3'
+                            className='my-12 cursor-pointer select-none h-20 sm:h-28 w-20 sm:w-28 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 shadow-md p-4 group duration-150 hover:p-3'
                         >
                             <div className='w-full h-full rounded-full bg-white/15 border border-white/10 flex items-center justify-center'>
-                                <Play />
+                                <IconPlayerPlayFilled />
                             </div>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>
@@ -139,7 +143,7 @@ function TradeBetter() {
                         <br />
                         <span className='text-accent-1'>Precision Algo</span>
                     </h1>
-                    <p className='mt-5 text-sm sm:text-base text-foreground-2'>
+                    <p className='mt-5 text-sm sm:text-base font-light text-foreground-2'>
                         Stop missing out of substantial market gains. PercentAlgo identifies significant upward and downward movements across diverse markets and timeframes.
                     </p>
                 </div>
@@ -158,7 +162,7 @@ function TradeBetter() {
                     y: parallaxPosition.y,
                 }}
                 transition={{ duration: 0 }}
-                className='absolute -bottom-24 lg:bottom-0 right-0 -mt-1/2 -ml-1/2 w-1/2 sm:w-72 z-30'
+                className='backdrop-blur-sm rounded-xl border border-border-1 absolute -bottom-24 lg:bottom-0 right-0 -mt-1/2 -ml-1/2 w-1/2 sm:w-72 z-30'
             />
         </motion.div>
     );
@@ -173,8 +177,8 @@ function UniversalMarketCompatibility() {
             className='w-full mt-56'
         >
             <div className='relative w-full mx-auto'>
-                <img src='/radar.svg' className='mx-auto max-h-80' />
-                <div className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2 border border-border-1 flex items-center justify-center'>
+                <video src='/radar.mp4' className='mx-auto max-h-80' autoPlay loop muted />
+                <div className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2/80 backdrop-blur-sm border border-border-1/50 flex items-center justify-center'>
                     <img src='/smallLogo.svg' className='w-full p-6' />
                 </div>
 
@@ -182,7 +186,7 @@ function UniversalMarketCompatibility() {
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
-                        <p className='mt-2 text-sm sm:text-base text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you&apos;re trading stocks, forex, commodities, or cryptocurrency.</p>
+                        <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you&apos;re trading stocks, forex, commodities, or cryptocurrency.</p>
                         <Button className='mt-6 mx-auto'>Get Access Now</Button>
                     </div>
                 </div>
@@ -201,8 +205,8 @@ function Faq() {
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <div className='flex items-center justify-between'>
-                    <span className='text-sm sm:text-base'>{title}</span>
-                    <Plus className={clsx('duration-150', isOpen && 'text-accent-1 rotate-45')} />
+                    <span className={clsx('duration-150 text-sm sm:text-base', !isOpen && '!text-foreground-2')}>{title}</span>
+                    <IconPlus className={clsx('duration-150', isOpen && 'text-accent-1 rotate-45')} />
                 </div>
 
                 <AnimatePresence>
@@ -211,10 +215,10 @@ function Faq() {
                             initial={{ opacity: 0, translateY: '-25%' }}
                             animate={{ opacity: 1, translateY: 0 }}
                             exit={{ opacity: 0, translateY: '-25%' }}
-                            className={clsx('mt-2 text-xs sm:text-sm text-foreground-2')}
+                            className={clsx('mt-2 text-xs sm:text-sm font-light text-foreground-2')}
                             transition={{ duration: 0.15 }}
                         >
-                            {content.replace('\'', '&apos;')}
+                            {content}
                         </motion.p>
                     )}
                 </AnimatePresence>
@@ -223,7 +227,7 @@ function Faq() {
     }
 
     const questions = {
-        'Question 1': 'Precision Algo has revolutionized my approach to trading. The AI-driven analysis and timely signals have made all the difference. I can\'t imagine trading without it now.',
+        'Question 1': 'Precision Algo has revolutionized my approach to trading. The AI-driven analysis and timely signals have made all the difference. I cant imagine trading without it now.',
         'Question 2': 'How do I get started with Precision Algo?',
         'Question 3': 'What kind of support does Precision Algo offer?',
     };
@@ -250,6 +254,97 @@ function Faq() {
     )
 }
 
+function Pricing() {
+    function PriceCard({ term, price, discount, description, features }) {
+        return (
+            <div className='rounded-[40px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow'>
+                <div className='rounded-3xl border border-border-1 p-4 bg-background-2/95'>
+                    <div className='flex items-center justify-between'>
+                        <span className='text-sm sm:text-lg relative pl-4 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:h-full before:w-[2px] before:bg-accent-1 before:rounded-full'>{term}</span>
+                        {discount && (
+                            <span className='uppercase text-xs sm:text-sm bg-border-1/40 border border-border-1 text-accent-1 px-3 py-1 rounded-full'>Save {discount * 100}%</span>
+                        )}
+                    </div>
+                    <h1 className='mt-2 font-medium text-xl sm:text-4xl'>${price}<span className='text-foreground-2 text-sm sm:text-base font-light pl-2'>/{term}</span></h1>
+                    <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>{description}</p>
+                </div>
+                <div className='mt-6 space-y-2'>
+                    {features.map(feature => (
+                        <div className='flex items-center gap-4 text-xs sm:text-sm'>
+                            <div className='bg-accent-1 text-background-1 h-4 w-4 rounded-md flex items-center justify-center'>
+                                <IconCheck />
+                            </div>
+                            {feature}
+                        </div>
+                    ))}
+                </div>
+                <Button className='mt-6 w-full'>Purchase {term}</Button>
+            </div>
+        )
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
+            viewport={{ once: true }}
+            className='w-full max-w-screen-2xl mx-auto mt-44 px-6'
+        >
+            <div className='w-full max-w-screen-md mx-auto text-center'>
+                <span className='block w-fit text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Pricing</span>
+                <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Transparent Pricing</h1>
+                <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'>Fair pricing, unbeatable value, and exceptional features — whatever your budget is we have the perfect plan for you.</p>
+            </div>
+
+            <div className='mt-12 mx-auto w-fit flex items-center flex-wrap gap-6 2xl:gap-12'>
+                <PriceCard
+                    term='Monthly'
+                    price={49.99}
+                    description='Perfect for newcomers who want to get started with AI-powered trading.'
+                    features={[
+                        'Real time, non repainting buy & sell chart signals',
+                        'Customizable phone & desktop notifications',
+                        'Automatic support & resistance trendlines',
+                        'Automatic stop loss & take profit levels',
+                        '24/7 Customer support'
+                    ]}
+                />
+
+                <div className='hidden 2xl:block bg-border-1 w-[1px] h-44 flex-shrink-0' />
+
+                <PriceCard
+                    term='Quarterly'
+                    price={134.99}
+                    discount={0.1}
+                    description='Ideal for intermediate traders looking to enhance their strategies with advanced tools.'
+                    features={[
+                        'Real time, non repainting buy & sell chart signals',
+                        'Customizable phone & desktop notifications',
+                        'Automatic support & resistance trendlines',
+                        'Automatic stop loss & take profit levels',
+                        '24/7 Customer support'
+                    ]}
+                />
+
+                <div className='hidden 2xl:block bg-border-1 w-[1px] h-44 flex-shrink-0' />
+
+                <PriceCard
+                    term='Yearly'
+                    price={499.99}
+                    description='Designed for professional traders who demand the best.'
+                    features={[
+                        'Real time, non repainting buy & sell chart signals',
+                        'Customizable phone & desktop notifications',
+                        'Automatic support & resistance trendlines',
+                        'Automatic stop loss & take profit levels',
+                        '24/7 Customer support'
+                    ]}
+                />
+            </div>
+        </motion.div>
+    )
+}
+
 export default function Home() {
     return (
         <>
@@ -266,6 +361,7 @@ export default function Home() {
             <TradeBetter />
             <UniversalMarketCompatibility />
             <Faq />
+            <Pricing />
             <div className='h-96' />
         </>
     );
