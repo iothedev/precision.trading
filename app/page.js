@@ -239,7 +239,7 @@ function Faq() {
                 <img src='/question.svg' className='w-full p-4 sm:p-6' />
             </div>
 
-            <h1 className='mt-8 mb-12 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px] text-center'>Got a question ? We've got an answer</h1>
+            <h1 className='mt-8 mb-12 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px] text-center'>Got a question ? We&apos;ve got an answer</h1>
 
             <div className='space-y-4'>
                 {Object.entries(questions).map(([title, content], index) => (
