@@ -182,7 +182,7 @@ function UniversalMarketCompatibility() {
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
-                        <p className='mt-2 text-sm sm:text-base text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you're trading stocks, forex, commodities, or cryptocurrency.</p>
+                        <p className='mt-2 text-sm sm:text-base text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you&apos;re trading stocks, forex, commodities, or cryptocurrency.</p>
                         <Button className='mt-6 mx-auto'>Get Access Now</Button>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ function Faq() {
                             className={clsx('mt-2 text-xs sm:text-sm text-foreground-2')}
                             transition={{ duration: 0.15 }}
                         >
-                            {content}
+                            {content.replace('\'', '&apos;')}
                         </motion.p>
                     )}
                 </AnimatePresence>
