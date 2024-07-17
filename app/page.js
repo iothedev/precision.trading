@@ -278,7 +278,7 @@ function Pricing() {
                     <div className='flex items-center justify-between'>
                         <span className='text-sm sm:text-lg relative pl-4 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:h-full before:w-[2px] before:bg-accent-1 before:rounded-full'>{term}</span>
                         {discount && (
-                            <span className='uppercase text-xs sm:text-sm bg-border-1/40 border border-border-1 text-accent-1 px-3 py-1 rounded-full'>Save {discount * 100}%</span>
+                            <span className='uppercase text-xs sm:text-sm bg-accent-1/10 border border-accent-1/10 text-accent-1 px-3 py-1 rounded-full'>Save {discount * 100}%</span>
                         )}
                     </div>
                     <h1 className='mt-2 font-medium text-xl sm:text-4xl'>${price}<span className='text-foreground-2 text-sm sm:text-base font-light pl-2'>/{term}</span></h1>
