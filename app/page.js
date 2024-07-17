@@ -132,7 +132,7 @@ function TradeBetter() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full max-w-screen-xl mx-auto mt-24 px-6'
+            className='w-full max-w-screen-xl mx-auto mt-24 pb-44 px-6'
         >
             <div className='w-full max-w-screen-md flex items-stretch gap-6'>
                 <div className='relative w-[3px] bg-border-1 rounded-full flex-shrink-0'>
@@ -175,10 +175,10 @@ function UniversalMarketCompatibility() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full mt-56'
+            className='w-full mt-96'
         >
             <div className='relative w-full mx-auto'>
-                <video src='/radar.mp4' className='mx-auto max-h-80' autoPlay loop muted />
+                <video src='/radar.mp4' className='absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl object-bottom' autoPlay loop muted />
                 <div className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2/80 backdrop-blur-sm border border-border-1/50 flex items-center justify-center'>
                     <img src='/smallLogo.svg' className='w-full p-6' />
                 </div>
@@ -400,12 +400,12 @@ function Footer() {
 
                     <div className='flex gap-16'>
                         <div className='flex flex-col gap-2'>
-                            <span className='text-base sm:text-lg'>Precision Trading</span>
+                            <span className='text-sm sm:text-lg'>Precision Trading</span>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Pricing</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Tutorials & Guides</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Contact</a>
                         </div>
-                        <div className='flex flex-col gap-2'>
+                        <div className='flex flex-sm gap-2'>
                             <span className='text-base sm:text-lg'>Legal</span>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Privacy Policy</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Terms Of Service</a>
