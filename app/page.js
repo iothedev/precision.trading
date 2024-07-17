@@ -4,9 +4,10 @@ import Header from './Header';
 import Button from './Button';
 import Modal from './Modal';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IconPlayerPlayFilled, IconPlus, IconCheck } from '@tabler/icons-react';
+import { IconPlus, IconCheck } from '@tabler/icons-react';
 import clsx from 'clsx';
 
 function Hero() {
@@ -195,6 +196,21 @@ function UniversalMarketCompatibility() {
     )
 }
 
+function Reviews() {
+    return <></>
+    /*
+    return (
+        <div className='relative w-full mt-44 py-12 overflow-hidden'>
+            <div className='h-[600px] flex-shrink-0'/>
+            <div className='relative w-full p-12 backdrop-blur-xl z-20'>
+                hi
+            </div>
+            <img src='reviewsGlow.svg' className='w-full max-w-screen-md absolute left-1/2 bottom-0 -translate-x-1/2' />
+        </div>
+    )
+    */
+}
+
 function Faq() {
     function Question({ title, content }) {
         const [isOpen, setIsOpen] = useState(false);
@@ -239,7 +255,7 @@ function Faq() {
             viewport={{ once: true }}
             className='w-full max-w-screen-lg mx-auto mt-44 px-6'
         >
-            <div className='mx-auto h-12 sm:h-16 w-12 sm:w-16 rounded-full bg-background-2 border border-border-1 flex items-center justify-center'>
+            <div className='mx-auto h-12 sm:h-16 w-12 sm:w-16 rounded-full bg-background-2 border border-border-1 flex items-center justify-center overflow-hidden relative before:absolute before:h-5 before:w-8 before:bg-accent-1 before:top-0 before:rounded-full before:blur-lg before:opacity-20'>
                 <img src='/question.svg' className='w-full p-4 sm:p-6' />
             </div>
 
@@ -345,6 +361,64 @@ function Pricing() {
     )
 }
 
+function Cta() {
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
+            viewport={{ once: true }}
+            className='relative z-20 w-full max-w-screen-sm mx-auto mt-44 text-center px-6'
+        >
+            <div className='mx-auto h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2/80 backdrop-blur-sm border border-border-1/50 flex items-center justify-center overflow-hidden relative before:absolute before:h-5 before:w-8 before:bg-accent-1 before:top-0 before:rounded-full before:blur-lg before:opacity-20'>
+                <img src='/smallLogo.svg' className='w-full p-6' />
+            </div>
+            <h1 class="mt-6 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]">Ready to start trading with<br /><span className='text-accent-1'>Precision Algo?</span></h1>
+            <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>Maximize your profitability with precision and confidence.</p>
+            <div className='mt-6 mx-auto space-x-4 w-fit'>
+                <Button>Get Access Now</Button>
+            </div>
+        </motion.div>
+    )
+}
+
+function Footer() {
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
+            viewport={{ once: true }}
+            className='relative mt-44 md:mt-96'
+        >
+            <div className='relative w-full border-t border-border-1 backdrop-blur-xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+                <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-6'>
+                    <div className='max-w-sm'>
+                        <Link href='/' className='block max-h-8'>
+                            <img src='/logo.svg' className='h-full' />
+                        </Link>
+                        <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.</p>
+                    </div>
+
+                    <div className='flex gap-16'>
+                        <div className='flex flex-col gap-2'>
+                            <span className='text-base sm:text-lg'>Precision Trading</span>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Pricing</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Tutorials & Guides</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Contact</a>
+                        </div>
+                        <div className='flex flex-col gap-2'>
+                            <span className='text-base sm:text-lg'>Legal</span>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Privacy Policy</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Terms Of Service</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src='/footerGlow.svg' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
+        </motion.div>
+    )
+}
+
 export default function Home() {
     return (
         <>
@@ -360,9 +434,11 @@ export default function Home() {
             <Statistics />
             <TradeBetter />
             <UniversalMarketCompatibility />
+            <Reviews />
             <Faq />
             <Pricing />
-            <div className='h-96' />
+            <Cta />
+            <Footer />
         </>
     );
 }
