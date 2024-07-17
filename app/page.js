@@ -405,8 +405,8 @@ function Footer() {
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Tutorials & Guides</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Contact</a>
                         </div>
-                        <div className='flex flex-sm gap-2'>
-                            <span className='text-base sm:text-lg'>Legal</span>
+                        <div className='flex flex-col gap-2'>
+                            <span className='text-sm sm:text-lg'>Legal</span>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Privacy Policy</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Terms Of Service</a>
                         </div>
