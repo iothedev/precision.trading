@@ -6,4 +6,9 @@
   body {
     @apply bg-background-1 text-foreground-1 selection:bg-accent-1/10;
   }
+
+  html,
+  body {
+    @apply overflow-x-hidden
+  }
 }
