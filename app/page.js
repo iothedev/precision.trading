@@ -69,7 +69,7 @@ function Statistics() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full max-w-screen-xl mx-auto mt-24 py-20 px-6 border-t border-border-1'
+            className='w-full max-w-screen-xl mx-auto sm:mt-24 py-20 px-6 sm:border-t border-border-1'
         >
             <div className='w-full flex items-center justify-center sm:justify-between gap-24 flex-wrap'>
                 <div className='text-center flex flex-col relative before:absolute before:bg-accent-1 before:-bottom-6 before:left-1/2 before:-translate-x-1/2 before:h-1 before:w-10 before:rounded-t-xl after:absolute after:bg-accent-1 after:-bottom-6 after:left-1/2 after:-translate-x-1/2 after:h-1 after:w-10 after:blur-lg after:opacity-50'>
@@ -185,7 +185,7 @@ function TradeBetter() {
                     y: parallaxPosition.y,
                 }}
                 transition={{ duration: 0 }}
-                className='backdrop-blur-sm rounded-xl border border-border-1 absolute -bottom-6 lg:bottom-1/4 right-0 -mt-1/2 -ml-1/2 w-1/2 sm:w-72 z-30'
+                className='backdrop-blur-sm rounded-xl border border-border-1 absolute bottom-12 sm:-bottom-6 lg:bottom-1/4 right-0 -mt-1/2 -ml-1/2 w-1/3 sm:w-72 z-30'
             />
         </motion.div>
     );
@@ -472,7 +472,7 @@ function Footer() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='relative mt-44 md:mt-96'
+            className='relative mt-44 md:mt-[600px]'
         >
             <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
