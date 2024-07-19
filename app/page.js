@@ -7,7 +7,7 @@ import Modal from './Modal';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IconPlus, IconCheck } from '@tabler/icons-react';
+import { IconPlus } from '@tabler/icons-react';
 import clsx from 'clsx';
 
 function Hero() {
@@ -41,7 +41,7 @@ function Video() {
             </Modal>
 
             <div className='relative w-full max-w-screen-xl mx-auto -mt-10 px-6'>
-                <div className='w-full border border-border-1 bg-background-3 rounded-[44px] p-4 sm:p-6'>
+                <div className='w-full border border-border-1 bg-background-3 rounded-[44px] p-4 sm:p-6 shadow-[inset_0px_4px_6px_0px_rgba(22,28,24,0.4)]'>
                     <div className='relative overflow-hidden w-full h-full rounded-[24px] border border-border-1 bg-background-2 flex items-center justify-center'>
                         <img
                             src='/thumbnail.png'
@@ -124,6 +124,14 @@ function TradeBetter() {
         });
     }, [mousePosition]);
 
+    const features = [
+        'Real time, non repainting buy & sell chart signals',
+        'Automatic support & resistance trendlines',
+        'Phone & desktop notifications (optional)',
+        'Automatic stop loss & take profit levels',
+        'Automatic divergence detector'
+    ]
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -131,25 +139,42 @@ function TradeBetter() {
             viewport={{ once: true }}
             className='w-full max-w-screen-xl mx-auto mt-24 pb-44 px-6'
         >
-            <div className='w-full max-w-screen-md flex items-stretch gap-6'>
-                <div className='relative w-[3px] bg-border-1 rounded-full flex-shrink-0'>
-                    <div className='rounded-full absolute top-0 left-0 w-full h-1/2 bg-accent-1' />
+            <div className='w-full flex lg:items-center justify-between gap-12 flex-col lg:flex-row'>
+                <img src='/stars.png' className='absolute top-0 right-0 lg:-translate-y-1/2 w-full max-w-screen-md -z-20' />
+
+                <div className='w-full max-w-screen-md flex items-stretch gap-6'>
+                    <div className='relative w-[3px] bg-border-1 rounded-full flex-shrink-0'>
+                        <div className='rounded-full absolute top-0 left-0 w-full h-1/2 bg-accent-1' />
+                    </div>
+                    <div className='flex-grow'>
+                        <h1 className='font-medium text-2xl sm:text-4xl'>
+                            Trade better with
+                            <br />
+                            <span className='text-accent-1'>Precision Algo</span>
+                        </h1>
+                        <p className='mt-5 text-sm sm:text-base font-light text-foreground-2'>
+                            Stop missing out of substantial market gains. PercentAlgo identifies significant upward and downward movements across diverse markets and timeframes.
+                        </p>
+                    </div>
                 </div>
-                <div className='flex-grow'>
-                    <h1 className='font-medium text-2xl sm:text-4xl'>
-                        Trade better with
-                        <br />
-                        <span className='text-accent-1'>Precision Algo</span>
-                    </h1>
-                    <p className='mt-5 text-sm sm:text-base font-light text-foreground-2'>
-                        Stop missing out of substantial market gains. PercentAlgo identifies significant upward and downward movements across diverse markets and timeframes.
-                    </p>
+
+                <div className='space-y-5'>
+                    {features.map((feature, index) => (
+                        <div key={index} className='flex items-center gap-4 text-xs sm:text-sm'>
+                            <div className='bg-accent-1 text-background-1 h-4 w-4 rounded-md flex items-center justify-center'>
+                                <img src='/check.png' className='min-w-[17px]' />
+                            </div>
+                            {feature}
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            <div className='w-full rounded-3xl border border-border-1 bg-background-2/20 mt-12 relative after:absolute after:w-[90%] after:h-4 sm:after:h-8 after:-bottom-4 sm:after:-bottom-8 after:left-1/2 after:-translate-x-1/2 after:rounded-b-3xl after:bg-background-2/20 after:border after:border-border-1 after:-z-10'>
-                <div className='w-full h-full rounded-3xl overflow-hidden'>
-                    <img src='/trades.png' className='w-full' />
+            <div className='w-full rounded-3xl border border-border-1 bg-gradient-to-b from-accent-1/20 via-accent-1/5 to-transparent mt-20 p-[1px] relative after:absolute after:w-[85%] sm:after:w-[95%] after:h-4 sm:after:h-8 after:-bottom-4 sm:after:-bottom-8 after:left-1/2 after:-translate-x-1/2 after:rounded-b-3xl after:bg-background-4 after:border after:border-border-1 after:-z-10'>
+                <div className='w-full h-full bg-background-4 rounded-3xl overflow-hidden relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-b before:from-accent-1/[0.01] before:to-transparent'>
+                    <div className='w-full h-full rounded-3xl overflow-hidden'>
+                        <img src='/trades.png' className='w-full' />
+                    </div>
                 </div>
             </div>
 
@@ -160,7 +185,7 @@ function TradeBetter() {
                     y: parallaxPosition.y,
                 }}
                 transition={{ duration: 0 }}
-                className='backdrop-blur-sm rounded-xl border border-border-1 absolute -bottom-24 lg:bottom-0 right-0 -mt-1/2 -ml-1/2 w-1/2 sm:w-72 z-30'
+                className='backdrop-blur-sm rounded-xl border border-border-1 absolute -bottom-6 lg:bottom-1/4 right-0 -mt-1/2 -ml-1/2 w-1/2 sm:w-72 z-30'
             />
         </motion.div>
     );
@@ -176,9 +201,7 @@ function UniversalMarketCompatibility() {
         >
             <div className='relative w-full mx-auto'>
                 <video src='/radar.mp4' className='absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl object-bottom' autoPlay loop muted />
-                <div className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2/60 backdrop-blur-sm border border-border-1/50 flex items-center justify-center'>
-                    <img src='/smallLogo.png' className='w-full p-6' />
-                </div>
+                <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20' />
 
                 <div className='w-full border-t border-border-1'>
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
@@ -214,7 +237,7 @@ function Faq() {
 
         return (
             <div
-                className='w-full rounded-3xl border border-border-1 bg-background-2 p-5 cursor-pointer select-none'
+                className='w-full rounded-3xl border border-border-1 bg-background-2 p-5 cursor-pointer select-none shadow-inner'
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <div className='flex items-center justify-between'>
@@ -252,10 +275,7 @@ function Faq() {
             viewport={{ once: true }}
             className='w-full max-w-screen-lg mx-auto mt-44 px-6'
         >
-            <div className='mx-auto h-12 sm:h-16 w-12 sm:w-16 rounded-full bg-background-2 border border-border-1 flex items-center justify-center overflow-hidden relative before:absolute before:h-5 before:w-8 before:bg-accent-1 before:top-0 before:rounded-full before:blur-lg before:opacity-20'>
-                <img src='/question.png' className='w-full p-4 sm:p-6' />
-            </div>
-
+            <img src='/question.png' className='w-full mx-auto max-w-16' />
             <h1 className='mt-8 mb-12 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px] text-center'>Got a question ? We&apos;ve got an answer</h1>
 
             <div className='space-y-4'>
@@ -270,8 +290,8 @@ function Faq() {
 function Pricing() {
     function PriceCard({ term, price, discount, description, features }) {
         return (
-            <div className='rounded-[40px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow'>
-                <div className='rounded-3xl border border-border-1 p-4 bg-background-2/95'>
+            <div className='rounded-[36px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow shadow-inner'>
+                <div className='rounded-t-[20px] rounded-b-[10px] border border-border-1 p-4 bg-background-2/95 shadow-inner'>
                     <div className='flex items-center justify-between'>
                         <span className='text-sm sm:text-lg relative pl-4 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:h-full before:w-[2px] before:bg-accent-1 before:rounded-full'>{term}</span>
                         {discount && (
@@ -285,7 +305,7 @@ function Pricing() {
                     {features.map((feature, index) => (
                         <div key={index} className='flex items-center gap-4 text-xs sm:text-sm'>
                             <div className='bg-accent-1 text-background-1 h-4 w-4 rounded-md flex items-center justify-center'>
-                                <IconCheck />
+                                <img src='/check.png' className='min-w-[17px]' />
                             </div>
                             {feature}
                         </div>
@@ -366,10 +386,8 @@ function Cta() {
             viewport={{ once: true }}
             className='relative z-20 w-full max-w-screen-sm mx-auto mt-44 text-center px-6'
         >
-            <div className='mx-auto h-20 sm:h-24 w-20 sm:w-24 rounded-full bg-background-2/80 backdrop-blur-sm border border-border-1/50 flex items-center justify-center overflow-hidden relative before:absolute before:h-5 before:w-8 before:bg-accent-1 before:top-0 before:rounded-full before:blur-lg before:opacity-20'>
-                <img src='/smallLogo.png' className='w-full p-6' />
-            </div>
-            <h1 class="mt-6 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]">Ready to start trading with<br /><span className='text-accent-1'>Precision Algo?</span></h1>
+            <img src='/logoBoxed.png' className='mx-auto w-full max-w-20' />
+            <h1 className='mt-6 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Ready to start trading with<br /><span className='text-accent-1'>Precision Algo?</span></h1>
             <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>Maximize your profitability with precision and confidence.</p>
             <div className='mt-6 mx-auto flex gap-4 w-fit'>
                 <Button variant={1}>Get Access Now</Button>
@@ -421,11 +439,12 @@ export default function Home() {
     return (
         <>
             <div className='relative w-full border-b border-border-1 pb-16 overflow-hidden'>
+                <Header />
+
                 <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-96 bg-accent-1/5 rounded-[100%] blur-3xl -z-40' />
                 <div className='absolute top-0 left-0 w-full h-full -z-40 bg-gradient-to-t from-background-1 to-transparent' />
                 <img src='/hero.gif' className='absolute top-[-10%] left-0 w-full h-[170%] -z-50' />
-
-                <Header />
+                
                 <Hero />
             </div>
             <Video />
