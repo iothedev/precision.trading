@@ -201,7 +201,7 @@ function UniversalMarketCompatibility() {
         >
             <div className='relative w-full mx-auto'>
                 <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted />
-                <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-10' />
+                <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-30' />
 
                 <div className='relative z-20 w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
@@ -230,14 +230,11 @@ function Reviews() {
     }
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
-            viewport={{ once: true }}
+        <div
             className='relative mt-[600px]'
         >
             <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
-                <h1 className='mx-auto block w-fit font-medium text-3xl sm:text-4xl text-center px-6'>What our users are saying</h1>
+                <h1 className='mx-auto block w-fit font-medium text-2xl sm:text-4xl text-center px-6'>What our users are saying</h1>
                 <div className='mt-12 -translate-x-1/2 md:translate-x-0'>
                     <div className='flex gap-6 w-fit mx-auto translate-x-12'>
                         <Review
@@ -287,7 +284,7 @@ function Reviews() {
             </div>
             <img src='/reviewsGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
             <img src='/reviewsLines.png' className='absolute -z-40 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
-        </motion.div>
+        </div>
     )
     /*
     return (
