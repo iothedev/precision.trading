@@ -405,11 +405,11 @@ function Footer() {
             viewport={{ once: true }}
             className='relative mt-44 md:mt-96'
         >
-            <div className='relative w-full border-t border-border-1 backdrop-blur-xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
                     <div className='max-w-sm mx-auto sm:mx-0'>
-                        <Link href='/' className='block max-h-8'>
-                            <img src='/logo.png' className='h-full' />
+                        <Link href='/' className='block'>
+                            <img src='/logo.png' className='h-full max-h-6' />
                         </Link>
                         <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.</p>
                     </div>
@@ -430,7 +430,8 @@ function Footer() {
                 </div>
 
             </div>
-            <img src='/footerGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
+            <img src='/footerGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 max-w-[800px] hidden md:block' />
+            <img src='/footerLines.png' className='absolute -z-40 bottom-0 left-1/2 -translate-x-1/2 max-w-[800px] hidden md:block' />
         </motion.div>
     )
 }
