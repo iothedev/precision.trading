@@ -5,7 +5,7 @@ import Button from './Button';
 
 function Header() {
     return (
-        <header className='w-full max-w-screen-xl mx-auto pb-6 pt-12 px-6 flex items-center justify-between z-50'>
+        <header className='relative w-full max-w-screen-xl mx-auto pb-6 pt-12 px-6 flex items-center justify-between z-50'>
             <Link href='/' className='block'>
                 <img src='/logo.png' className='h-full max-h-6' />
             </Link>
