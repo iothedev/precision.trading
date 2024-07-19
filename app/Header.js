@@ -10,7 +10,7 @@ function Header() {
                 <img src='/logo.png' className='h-full' />
             </Link>
 
-            <Button className='hidden sm:flex'>Get Access Now</Button>
+            <Button variant={1} className='hidden sm:flex'>Get Access Now</Button>
         </header>
     );
 }

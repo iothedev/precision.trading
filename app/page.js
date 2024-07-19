@@ -412,7 +412,7 @@ function Footer() {
                 </div>
 
             </div>
-            <img src='/footerGlow.svg' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
+            <img src='/footerGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
         </motion.div>
     )
 }
