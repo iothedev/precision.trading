@@ -16,7 +16,7 @@ function Header() {
                 <Link href='#' className='duration-150 hover:text-foreground-1 border-white/5 rounded-full px-3 py-2 hover:border hover:bg-white/[0.025]'>Contact</Link>
             </div>
 
-            <Button variant={1} className='hidden sm:flex'>Get Access Now</Button>
+            <Button variant={1} className='hidden sm:flex' href='https://whop.com/precisionalgo/'>Get Access Now</Button>
         </header>
     );
 }

@@ -6,7 +6,7 @@ import Modal from './Modal';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { IconPlus } from '@tabler/icons-react';
 import clsx from 'clsx';
 
@@ -200,7 +200,7 @@ function UniversalMarketCompatibility() {
             className='w-full mt-96'
         >
             <div className='relative w-full mx-auto'>
-                <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted />
+                <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted playsInline />
                 <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-30' />
 
                 <div className='relative z-20 w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
@@ -208,7 +208,7 @@ function UniversalMarketCompatibility() {
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
                         <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you&apos;re trading stocks, forex, commodities, or cryptocurrency.</p>
-                        <Button variant={1} className='mt-6 mx-auto'>Get Access Now</Button>
+                        <Button variant={1} className='mt-6 mx-auto' href='https://whop.com/precisionalgo/'>Get Access Now</Button>
                     </div>
                 </div>
             </div>
@@ -233,10 +233,12 @@ function Reviews() {
         <div
             className='relative mt-[600px]'
         >
-            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+            <div className='relative w-full border-t bg-background-1/80 border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <h1 className='mx-auto block w-fit font-medium text-2xl sm:text-4xl text-center px-6'>What our users are saying</h1>
                 <div className='mt-12 -translate-x-1/2 md:translate-x-0'>
-                    <div className='flex gap-6 w-fit mx-auto translate-x-12'>
+                    <motion.div 
+                        className='flex gap-6 w-fit mx-auto translate-x-12'
+                    >
                         <Review
                             title='Transformational Trading Tool!'
                             content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
@@ -257,8 +259,10 @@ function Reviews() {
                             content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
                             author='Alex R'
                         />
-                    </div>
-                    <div className='mt-6 flex gap-6 w-fit mx-auto -translate-x-12'>
+                    </motion.div>
+                    <motion.div
+                        className='mt-6 flex gap-6 w-fit mx-auto -translate-x-12'
+                    >
                         <Review
                             title='Transformational Trading Tool!'
                             content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
@@ -279,24 +283,13 @@ function Reviews() {
                             content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
                             author='Alex R'
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-            <img src='/reviewsGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
+            <img src='/reviewsGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/3 max-w-[800px]' />
             <img src='/reviewsLines.png' className='absolute -z-40 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
         </div>
     )
-    /*
-    return (
-        <div className='relative w-full mt-44 py-12 overflow-hidden'>
-            <div className='h-[600px] flex-shrink-0'/>
-            <div className='relative w-full p-12 backdrop-blur-xl z-20'>
-                hi
-            </div>
-            <img src='reviewsGlow.svg' className='w-full max-w-screen-md absolute left-1/2 bottom-0 -translate-x-1/2' />
-        </div>
-    )
-    */
 }
 
 function Faq() {
@@ -474,7 +467,7 @@ function Footer() {
             viewport={{ once: true }}
             className='relative mt-44 md:mt-[600px]'
         >
-            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl bg-background-1/80 py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
                     <div className='max-w-sm mx-auto sm:mx-0'>
                         <Link href='/' className='block'>
@@ -513,7 +506,7 @@ export default function Home() {
 
                 <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-96 bg-accent-1/5 rounded-[100%] blur-3xl -z-40' />
                 <div className='absolute top-0 left-0 w-full h-full -z-40 bg-gradient-to-t from-background-1 to-transparent' />
-                <img src='/hero.gif' className='absolute top-[-10%] left-0 w-full h-[170%] -z-50' />
+                <img src='/hero.gif' className='absolute top-[-10%] left-0 w-full h-[170%] -z-50 hidden sm:block' />
 
                 <Hero />
             </div>
