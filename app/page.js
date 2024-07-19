@@ -236,7 +236,15 @@ function Reviews() {
             <div className='relative w-full border-t bg-background-1/80 border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <h1 className='mx-auto block w-fit font-medium text-2xl sm:text-4xl text-center px-6'>What our users are saying</h1>
                 <div className='mt-12 -translate-x-1/2 md:translate-x-0'>
-                    <motion.div 
+                    <motion.div
+                        animate={{
+                            translateX: ['-25%', '25%'],
+                        }}
+                        transition={{
+                            duration: 25,
+                            repeat: Infinity,
+                            repeatDelay: 0
+                        }}
                         className='flex gap-6 w-fit mx-auto translate-x-12'
                     >
                         <Review
@@ -261,7 +269,15 @@ function Reviews() {
                         />
                     </motion.div>
                     <motion.div
-                        className='mt-6 flex gap-6 w-fit mx-auto -translate-x-12'
+                        animate={{
+                            translateX: ['25%', '-25%'],
+                        }}
+                        transition={{
+                            duration: 25,
+                            repeat: Infinity,
+                            repeatDelay: 0
+                        }}
+                        className='mt-6 flex gap-6 w-fit mx-auto translate-x-12'
                     >
                         <Review
                             title='Transformational Trading Tool!'
