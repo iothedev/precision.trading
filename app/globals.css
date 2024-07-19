@@ -9,6 +9,6 @@
 
   html,
   body {
-    @apply overflow-x-hidden
+    @apply overflow-x-hidden scroll-smooth scroll-pt-12
   }
 }

@@ -17,8 +17,8 @@ function Hero() {
             <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'> Our cutting-edge, AI-powered trading indicator is designed to
                 give you the edge in the market by delivering accurate and timely signals.</p>
             <div className='mt-8 flex gap-4 mx-auto w-fit'>
-                <Button variant={1}>Get Access Now</Button>
-                <Button variant={2}>Pricing</Button>
+                <Button variant={1} href='https://whop.com/precisionalgo/'>Get Access Now</Button>
+                <Button variant={2} href='#pricing'>Pricing</Button>
             </div>
         </div>
     );
@@ -40,7 +40,7 @@ function Video() {
                 </div>
             </Modal>
 
-            <div className='relative w-full max-w-screen-xl mx-auto -mt-10 px-6'>
+            <div className='relative w-full max-w-screen-xl mx-auto -mt-10 px-6 hidden sm:block'>
                 <div className='w-full border border-border-1 bg-background-3 rounded-[44px] p-4 sm:p-6 shadow-[inset_0px_4px_6px_0px_rgba(22,28,24,0.4)]'>
                     <div className='relative overflow-hidden w-full h-full rounded-[24px] border border-border-1 bg-background-2 flex items-center justify-center'>
                         <img
@@ -203,7 +203,7 @@ function UniversalMarketCompatibility() {
                 <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted />
                 <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-10' />
 
-                <div className='w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
+                <div className='relative z-20 w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
@@ -217,7 +217,78 @@ function UniversalMarketCompatibility() {
 }
 
 function Reviews() {
-    return <></>
+    function Review({ title, content, author }) {
+        return (
+            <div className='p-3 bg-background-1 border border-border-1 rounded-[32px] shadow-inner min-w-[600px]'>
+                <div className='p-4 bg-background-2 border border-border-1 rounded-[20px] shadow-inner h-full'>
+                    <span className='text-base sm:text-lg'>{title}</span>
+                    <p className='mt-2 block text-xs sm:text-sm text-foreground-2'>{content}</p>
+                    <span className='mt-2 block text-accent-1'>- {author}</span>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
+            viewport={{ once: true }}
+            className='relative mt-[600px]'
+        >
+            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+                <h1 className='mx-auto block w-fit font-medium text-3xl sm:text-4xl text-center px-6'>What our users are saying</h1>
+                <div className='mt-12 -translate-x-1/2 md:translate-x-0'>
+                    <div className='flex gap-6 w-fit mx-auto translate-x-12'>
+                        <Review
+                            title='Transformational Trading Tool!'
+                            content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
+                            author='Alex R'
+                        />
+                        <Review
+                            title='Revolutionized My Trading Approach'
+                            content='Precision Algo has revolutionized my approach to trading. The AI-driven analysis and timely signals have made all the difference. I can&apos;t imagine trading without it now.'
+                            author='Rachel M.'
+                        />
+                        <Review
+                            title='Unparalleled Market Insights'
+                            content='The market insights provided by Precision Algo are unparalleled. It has given me a new level of understanding and control over my trades. My confidence and profits have soared since I started using it.'
+                            author='Daniel S.'
+                        />
+                        <Review
+                            title='Transformational Trading Tool!'
+                            content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
+                            author='Alex R'
+                        />
+                    </div>
+                    <div className='mt-6 flex gap-6 w-fit mx-auto -translate-x-12'>
+                        <Review
+                            title='Transformational Trading Tool!'
+                            content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
+                            author='Alex R'
+                        />
+                        <Review
+                            title='Revolutionized My Trading Approach'
+                            content='Precision Algo has revolutionized my approach to trading. The AI-driven analysis and timely signals have made all the difference. I can&apos;t imagine trading without it now.'
+                            author='Rachel M.'
+                        />
+                        <Review
+                            title='Unparalleled Market Insights'
+                            content='The market insights provided by Precision Algo are unparalleled. It has given me a new level of understanding and control over my trades. My confidence and profits have soared since I started using it.'
+                            author='Daniel S.'
+                        />
+                        <Review
+                            title='Transformational Trading Tool!'
+                            content='Precision Algo has completely transformed my trading strategy. The AI-powered signals are incredibly accurate, helping me make informed decisions and boost my profits. Highly recommended!'
+                            author='Alex R'
+                        />
+                    </div>
+                </div>
+            </div>
+            <img src='/reviewsGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
+            <img src='/reviewsLines.png' className='absolute -z-40 bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[800px]' />
+        </motion.div>
+    )
     /*
     return (
         <div className='relative w-full mt-44 py-12 overflow-hidden'>
@@ -273,7 +344,7 @@ function Faq() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full max-w-screen-lg mx-auto px-6'
+            className='w-full max-w-screen-lg mx-auto px-6 mt-44'
         >
             <img src='/question.png' className='w-full mx-auto max-w-16' />
             <h1 className='mt-8 mb-12 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px] text-center'>Got a question ? We&apos;ve got an answer</h1>
@@ -322,6 +393,7 @@ function Pricing() {
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
             className='w-full max-w-screen-2xl mx-auto mt-44 px-6'
+            id='pricing'
         >
             <div className='w-full max-w-screen-md mx-auto text-center'>
                 <span className='block w-fit text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Pricing</span>
@@ -390,8 +462,8 @@ function Cta() {
             <h1 className='mt-6 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Ready to start trading with<br /><span className='text-accent-1'>Precision Algo?</span></h1>
             <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>Maximize your profitability with precision and confidence.</p>
             <div className='mt-6 mx-auto flex gap-4 w-fit'>
-                <Button variant={1}>Get Access Now</Button>
-                <Button variant={2}>Pricing</Button>
+                <Button variant={1} href='https://whop.com/precisionalgo/'>Get Access Now</Button>
+                <Button variant={2} href='#pricing'>Pricing</Button>
             </div>
         </motion.div>
     )
@@ -417,7 +489,7 @@ function Footer() {
                     <div className='flex gap-16 mx-auto sm:mx-0'>
                         <div className='flex flex-col gap-2'>
                             <span className='text-sm sm:text-lg'>Precision Trading</span>
-                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Pricing</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='#pricing'>Pricing</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Tutorials & Guides</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Contact</a>
                         </div>
