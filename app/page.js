@@ -381,7 +381,12 @@ function Cta() {
 
 function Footer() {
     return (
-        <div className='relative mt-44 md:mt-96'>        
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, translateY: ['25%', 0] }}
+            viewport={{ once: true }}
+            className='relative mt-44 md:mt-96'
+        >
             <div className='relative w-full border-t border-border-1 backdrop-blur-xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
                     <div className='max-w-sm mx-auto sm:mx-0'>
@@ -407,8 +412,8 @@ function Footer() {
                 </div>
 
             </div>
-            <img src='/footerGlow.png' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
-        </div>
+            <img src='/footerGlow.svg' className='absolute -z-30 bottom-0 left-1/2 -translate-x-1/2 min-w-[800px] hidden md:block' />
+        </motion.div>
     )
 }
 
