@@ -200,10 +200,10 @@ function UniversalMarketCompatibility() {
             className='w-full mt-96'
         >
             <div className='relative w-full mx-auto'>
-                <video src='/radar_test.mp4' className='absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl object-bottom' autoPlay loop muted />
-                <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20' />
+                <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted />
+                <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-10' />
 
-                <div className='w-full border-t border-border-1'>
+                <div className='w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
                     <div className='w-full max-w-screen-sm mx-auto text-center px-6'>
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
@@ -273,7 +273,7 @@ function Faq() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full max-w-screen-lg mx-auto mt-44 px-6'
+            className='w-full max-w-screen-lg mx-auto px-6'
         >
             <img src='/question.png' className='w-full mx-auto max-w-16' />
             <h1 className='mt-8 mb-12 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px] text-center'>Got a question ? We&apos;ve got an answer</h1>
