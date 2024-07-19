@@ -243,7 +243,8 @@ function Reviews() {
                         transition={{
                             duration: 25,
                             repeat: Infinity,
-                            repeatDelay: 0
+                            repeatDelay: 0,
+                            ease: 'linear'
                         }}
                         className='flex gap-6 w-fit mx-auto translate-x-12'
                     >
@@ -275,7 +276,8 @@ function Reviews() {
                         transition={{
                             duration: 25,
                             repeat: Infinity,
-                            repeatDelay: 0
+                            repeatDelay: 0,
+                            ease: 'linear'
                         }}
                         className='mt-6 flex gap-6 w-fit mx-auto translate-x-12'
                     >
