@@ -17,7 +17,7 @@ function Hero() {
             <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'> Our cutting-edge, AI-powered trading indicator is designed to
                 give you the edge in the market by delivering accurate and timely signals.</p>
             <div className='mt-8 flex gap-4 mx-auto w-fit'>
-                <Button variant={1} href='https://whop.com/precisionalgo/'>Get Access Now</Button>
+                <Button variant={1} href='https://whop.com/precisionalgo/' target='_blank'>Get Access Now</Button>
                 <Button variant={2} href='#pricing'>Pricing</Button>
             </div>
         </div>
@@ -200,7 +200,7 @@ function UniversalMarketCompatibility() {
             className='w-full mt-96'
         >
             <div className='relative w-full mx-auto'>
-                <video src='/radar_test.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted playsInline />
+                <video src='/radar.mp4' className='absolute -translate-y-1/2 top-0 left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl -z-10' autoPlay loop muted playsInline />
                 <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20 z-30' />
 
                 <div className='relative z-20 w-full border-t pb-44 border-border-1 bg-background-1/80 backdrop-blur-sm'>
@@ -208,7 +208,7 @@ function UniversalMarketCompatibility() {
                         <span className='block w-fit mt-16 sm:mt-20 text-xs sm:text-sm bg-background-2 border border-border-1 rounded-full py-1 px-3 mx-auto'>Worldwide</span>
                         <h1 className='mt-2 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Universal market compatibility</h1>
                         <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'>Seamlessly integrate with a wide range of financial markets. Whether you&apos;re trading stocks, forex, commodities, or cryptocurrency.</p>
-                        <Button variant={1} className='mt-6 mx-auto' href='https://whop.com/precisionalgo/'>Get Access Now</Button>
+                        <Button variant={1} className='mt-6 mx-auto' href='https://whop.com/precisionalgo/' target='_blank'>Get Access Now</Button>
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@ function Reviews() {
         <div
             className='relative mt-[600px]'
         >
-            <div className='relative w-full border-t bg-background-1/80 border-border-1 backdrop-blur-3xl py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+            <div className='relative w-full border-t bg-background-1/90 border-border-1 backdrop-blur-[90px] py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <h1 className='mx-auto block w-fit font-medium text-2xl sm:text-4xl text-center px-6'>What our users are saying</h1>
                 <div className='mt-12 -translate-x-1/2 md:translate-x-0'>
                     <motion.div
@@ -470,7 +470,7 @@ function Cta() {
             <h1 className='mt-6 text-2xl sm:text-4xl font-medium !leading-tight tracking-[-2px]'>Ready to start trading with<br /><span className='text-accent-1'>Precision Algo?</span></h1>
             <p className='mt-2 text-xs sm:text-sm font-light text-foreground-2'>Maximize your profitability with precision and confidence.</p>
             <div className='mt-6 mx-auto flex gap-4 w-fit'>
-                <Button variant={1} href='https://whop.com/precisionalgo/'>Get Access Now</Button>
+                <Button variant={1} href='https://whop.com/precisionalgo/' target='_blank'>Get Access Now</Button>
                 <Button variant={2} href='#pricing'>Pricing</Button>
             </div>
         </motion.div>
@@ -485,7 +485,7 @@ function Footer() {
             viewport={{ once: true }}
             className='relative mt-44 md:mt-[600px]'
         >
-            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl bg-background-1/80 py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
+            <div className='relative w-full border-t border-border-1 backdrop-blur-3xl bg-background-1/90 py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
                     <div className='max-w-sm mx-auto sm:mx-0'>
                         <Link href='/' className='block'>

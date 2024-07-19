@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 
-function Button({ href, children, className, variant }) {
+function Button({ href, target, children, className, variant }) {
     return (
         <Link
             href={href || String()}
+            target={target || String()}
             className={clsx(
                 className,
                 'flex items-center justify-center w-fit text-xs sm:text-sm font-medium text-center',
