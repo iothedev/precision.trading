@@ -200,7 +200,7 @@ function UniversalMarketCompatibility() {
             className='w-full mt-96'
         >
             <div className='relative w-full mx-auto'>
-                <video src='/radar.mp4' className='absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl object-bottom' autoPlay loop muted />
+                <video src='/radar_test.mp4' className='absolute bottom-full left-1/2 -translate-x-1/2 mx-auto w-full min-w-[750px] max-w-screen-xl object-bottom' autoPlay loop muted />
                 <img src='/logoBoxed.png' className='absolute -translate-y-1/2 left-1/2 -translate-x-1/2 w-full max-w-20' />
 
                 <div className='w-full border-t border-border-1'>
@@ -444,7 +444,7 @@ export default function Home() {
                 <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-96 bg-accent-1/5 rounded-[100%] blur-3xl -z-40' />
                 <div className='absolute top-0 left-0 w-full h-full -z-40 bg-gradient-to-t from-background-1 to-transparent' />
                 <img src='/hero.gif' className='absolute top-[-10%] left-0 w-full h-[170%] -z-50' />
-                
+
                 <Hero />
             </div>
             <Video />
