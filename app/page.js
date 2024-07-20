@@ -491,7 +491,18 @@ function Footer() {
                         <Link href='/' className='block'>
                             <img src='/logo.png' className='h-full max-h-6' />
                         </Link>
-                        <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.</p>
+                        <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.<br/>Precision Trading are not registered financial advisors. </p>
+                        <div className='flex gap-6 mt-6 *:max-w-5 *:duration-150 *:opacity-30 hover:*:opacity-100'>
+                            <Link href='https://x.com' target='_blank'>
+                                <img src='/x.png' className='w-full' />
+                            </Link>
+                            <Link href='https://instagram.com' target='_blank'>
+                                <img src='/instagram.png' className='w-full' />
+                            </Link>
+                            <Link href='https://discord.gg' target='_blank'>
+                                <img src='/discord.png' className='w-full' />
+                            </Link>
+                        </div>
                     </div>
 
                     <div className='flex gap-16 mx-auto sm:mx-0'>
