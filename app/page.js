@@ -342,9 +342,10 @@ function Faq() {
     }
 
     const questions = {
-        'Question 1': 'Precision Algo has revolutionized my approach to trading. The AI-driven analysis and timely signals have made all the difference. I cant imagine trading without it now.',
-        'Question 2': 'How do I get started with Precision Algo?',
-        'Question 3': 'What kind of support does Precision Algo offer?',
+        'What markets does Precision Trading cover?': 'Precision Trading covers a wide range of markets, including stocks, forex, cryptocurrencies, and commodities. Our algorithms are designed to be versatile and can analyze various asset classes to provide you with comprehensive trading signals.',
+        'How does the AI algorithm in Precision Trading work?': 'Our AI algorithm utilizes advanced machine learning techniques to analyze vast amounts of market data, including price movements, volume, and historical trends. It identifies patterns and signals that indicate potential trading opportunities.',
+        'Is Precision Trading suitable for beginners?': 'Absolutely! Precision Trading is user-friendly and designed to accommodate traders of all experience levels. Our platform provides detailed explanations and guidance for each trading signal, making it easy for beginners to understand and execute trades.',
+        'How do I get started with Precision Trading?': 'Getting started with Precision Trading is simple. Just sign up on our website, choose a subscription plan that fits your needs, and you'll gain access to our trading platform and signals. You'll also receive a comprehensive guide to help you set up and start using our service effectively.',
     };
 
     return (
