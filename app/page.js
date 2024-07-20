@@ -488,11 +488,11 @@ function Footer() {
             <div className='relative w-full border-t border-border-1 backdrop-blur-3xl bg-background-1/90 py-12 before:absolute before:top-[-1px] before:left-1/2 before:-translate-x-1/2 before:h-[1px] before:w-1/2 before:bg-gradient-to-r before:from-transparent before:via-accent-1 before:to-transparent before:hidden md:before:block'>
                 <div className='w-full max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-12 text-center sm:text-left'>
                     <div className='max-w-sm mx-auto sm:mx-0'>
-                        <Link href='/' className='block'>
+                        <Link href='/' className='block w-fit mx-auto sm:mx-0'>
                             <img src='/logo.png' className='h-full max-h-6' />
                         </Link>
-                        <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.<br/>Precision Trading are not registered financial advisors. </p>
-                        <div className='flex gap-6 mt-6 *:max-w-5 *:duration-150 *:opacity-30 hover:*:opacity-100'>
+                        <p className='mt-4 text-xs sm:text-sm font-light text-foreground-2'>© Precision Algo. All rights reserved.<br/>Precision Trading is not a registered financial advisor. </p>
+                        <div className='mx-auto sm:mx-0 w-fit flex gap-6 mt-6 *:max-w-4 sm:*:max-w-5 *:duration-150 *:opacity-30 hover:*:opacity-100'>
                             <Link href='https://x.com' target='_blank'>
                                 <img src='/x.png' className='w-full' />
                             </Link>
