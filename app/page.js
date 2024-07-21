@@ -370,7 +370,7 @@ function Faq() {
 function Pricing() {
     function PriceCard({ term, price, discount, description, features }) {
         return (
-            <div className='rounded-[36px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow shadow-inner'>
+            <div className='flex flex-col justify-between rounded-[36px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow shadow-inner basis-full'>
                 <div className='rounded-t-[20px] rounded-b-[10px] border border-border-1 p-4 bg-background-2/95 shadow-inner'>
                     <div className='flex items-center justify-between'>
                         <span className='text-sm sm:text-lg relative pl-4 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:h-full before:w-[2px] before:bg-accent-1 before:rounded-full'>{term}</span>
@@ -391,7 +391,7 @@ function Pricing() {
                         </div>
                     ))}
                 </div>
-                <Button variant={1} className='mt-6 w-full'>Purchase {term}</Button>
+                <Button variant={1} className='w-full mt-6'>Purchase {term}</Button>
             </div>
         )
     }
@@ -410,7 +410,7 @@ function Pricing() {
                 <p className='mt-2 text-sm sm:text-base font-light text-foreground-2'>Fair pricing, unbeatable value, and exceptional features — whatever your budget is we have the perfect plan for you.</p>
             </div>
 
-            <div className='mt-12 mx-auto w-fit flex items-center flex-wrap gap-6 2xl:gap-12'>
+            <div className='mt-12 mx-auto w-fit flex flex-wrap lg:flex-nowrap gap-6 2xl:gap-12 2xl:items-center'>
                 <PriceCard
                     term='Monthly'
                     price={49.99}
