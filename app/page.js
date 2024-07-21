@@ -1,9 +1,11 @@
 'use client';
 
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
-import Button from '@/app/components/Button';
-import Modal from '@/app/components/Modal';
+import {
+    Header,
+    Footer,
+    Button,
+    Modal
+} from '@/app/components';
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

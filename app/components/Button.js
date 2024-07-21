@@ -20,4 +20,4 @@ function Button({ href, target, children, className, variant }) {
     )
 }
 
-export default Button;
+export { Button };

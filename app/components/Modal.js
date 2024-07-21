@@ -24,4 +24,4 @@ function Modal({ isOpen, setIsOpen, children }) {
     );
 }
 
-export default Modal;
+export { Modal };

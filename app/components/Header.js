@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Button from '@/app/components/Button';
+import { Button } from '@/app/components';
 
 function Header() {
     return (
@@ -21,4 +21,4 @@ function Header() {
     );
 }
 
-export default Header;
+export { Header };
