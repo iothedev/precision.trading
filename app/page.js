@@ -401,7 +401,7 @@ function Pricing() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, translateY: ['25%', 0] }}
             viewport={{ once: true }}
-            className='w-full max-w-screen-2xl mx-auto mt-44 px-6'
+            className='w-full max-w-screen-lg 2xl:max-w-screen-2xl mx-auto mt-44 px-6'
             id='pricing'
         >
             <div className='w-full max-w-screen-md mx-auto text-center'>
