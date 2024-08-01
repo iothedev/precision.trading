@@ -25,7 +25,7 @@ function Footer() {
                             <Link href='https://instagram.com' target='_blank'>
                                 <img src='/instagram.png' className='w-full' />
                             </Link>
-                            <Link href='https://discord.gg' target='_blank'>
+                            <Link href='https://discord.gg/precision' target='_blank'>
                                 <img src='/discord.png' className='w-full' />
                             </Link>
                         </div>
@@ -36,12 +36,11 @@ function Footer() {
                             <span className='text-sm sm:text-lg'>Precision Trading</span>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='#pricing'>Pricing</a>
                             <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Tutorials & Guides</a>
-                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Contact</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='https://discord.gg/precision' target='_blank'>Contact</a>
                         </div>
                         <div className='flex flex-col gap-2'>
                             <span className='text-sm sm:text-lg'>Legal</span>
-                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Privacy Policy</a>
-                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='/'>Terms Of Service</a>
+                            <a className='text-xs sm:text-sm font-light text-foreground-2 duration-150 hover:text-foreground-1' href='https://discord.gg/precision' target='_blank'>Terms Of Service</a>
                         </div>
                     </div>
                 </div>

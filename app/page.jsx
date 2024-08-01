@@ -370,7 +370,7 @@ function Faq() {
 }
 
 function Pricing() {
-    function PriceCard({ term, price, discount, description, features }) {
+    function PriceCard({ term, price, discount, description, features, store }) {
         return (
             <div className='flex flex-col justify-between rounded-[36px] border border-border-1 p-4 bg-background-2/50 2xl:max-w-96 flex-grow shadow-inner basis-full'>
                 <div className='rounded-t-[20px] rounded-b-[10px] border border-border-1 p-4 bg-background-2/95 shadow-inner'>
@@ -393,7 +393,12 @@ function Pricing() {
                         </div>
                     ))}
                 </div>
-                <Button variant={1} className='w-full mt-6'>Purchase {term}</Button>
+                <Button
+                    variant={1}
+                    className='w-full mt-6'
+                    href={store}
+                    target='_blank'
+                >Purchase {term}</Button>
             </div>
         )
     }
@@ -424,6 +429,7 @@ function Pricing() {
                         'Automatic stop loss & take profit levels',
                         '24/7 Customer support'
                     ]}
+                    store='https://whop.com/precisionalgo/'
                 />
 
                 <div className='hidden 2xl:block bg-border-1 w-[1px] h-44 flex-shrink-0' />
@@ -440,6 +446,7 @@ function Pricing() {
                         'Automatic stop loss & take profit levels',
                         '24/7 Customer support'
                     ]}
+                    store='https://whop.com/precisionalgo/?plan=plan_AzQBm8tIVdv8Q'
                 />
 
                 <div className='hidden 2xl:block bg-border-1 w-[1px] h-44 flex-shrink-0' />
@@ -455,6 +462,7 @@ function Pricing() {
                         'Automatic stop loss & take profit levels',
                         '24/7 Customer support'
                     ]}
+                    store='https://whop.com/precisionalgo/?plan=plan_XNS7DLhcRNOmf'
                 />
             </div>
         </motion.div>
