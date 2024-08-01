@@ -5,7 +5,7 @@ import {
     Footer,
     Button,
     Modal
-} from '@/app/components';
+} from '@/components';
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
