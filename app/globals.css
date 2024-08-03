@@ -12,3 +12,13 @@
     @apply overflow-x-hidden scroll-smooth scroll-pt-12
   }
 }
+
+.counter-reset {
+  counter-reset: section;
+}
+
+.counter-increment::before {
+  counter-increment: section;
+  content: counter(section) ". ";
+  /* @apply text-accent-1; */
+}

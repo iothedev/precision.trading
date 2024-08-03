@@ -1,0 +1,9 @@
+export { Hero } from './Hero';
+export { Video } from './Video';
+export { Statistics } from './Statistics';
+export { TradeBetter } from './TradeBetter';
+export { UniversalMarketCompatibility } from './UniversalMarketCompatability';
+export { Reviews } from './Reviews';
+export { Faq } from './Faq';
+export { Pricing } from './Pricing';
+export { Cta } from './Cta';
