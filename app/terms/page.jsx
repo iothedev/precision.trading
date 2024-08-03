@@ -18,7 +18,7 @@ export default function Terms() {
             <main className='w-full max-w-screen-xl mx-auto mt-24 px-6'>
                 <h1 className='mb-8 text-2xl sm:text-3xl font-medium'>Terms of Service</h1>
                 <div className='space-y-8'>
-                    <Term title='Acceptance of Terms'>By using Precision Trading's software, you agree to these terms, our Privacy Policy, and any additional guidelines or rules applicable to specific services. If you do not agree with any part of these terms, please do not use our software.</Term>
+                    <Term title='Acceptance of Terms'>By using Precision Trading&apos;s software, you agree to these terms, our Privacy Policy, and any additional guidelines or rules applicable to specific services. If you do not agree with any part of these terms, please do not use our software.</Term>
                     <Term title='Description of Services'>Precision Trading provides software solutions to help traders analyze the market technically. Our software is for educational purposes only and not investment advice.</Term>
                     <Term title='User Conduct'>
                         <p>You agree to use our software lawfully and not engage in activities that infringe upon or violate the rights of others. Prohibited actions include:</p>
